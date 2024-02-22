@@ -3,7 +3,8 @@
 -- Host: localhost    Database: sw_examen1_formatif
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.6.12-MariaDB-1:10.6.12+maria~ubu2004
-
+CREATE DATABASE sw_examen1_formatif;
+USE sw_examen1_formatif;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
