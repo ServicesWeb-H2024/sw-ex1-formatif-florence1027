@@ -3,6 +3,7 @@ const Titre = require("../models/titre.model.js");
 exports.listeTitre = (req, res) => {
     var page = 1;
     var show_type = 1;
+    var filtreOriginal = ""
     
     if(!req.query.page || parseInt(req.query.page) < 0){
         res.status(400);
@@ -29,6 +30,8 @@ exports.listeTitre = (req, res) => {
     else{
         show_type = req.params.type_titre;
     }
+
+    filtreOriginal = show_type;
 
     //Traduction de show_type 
     if (show_type == "film") {
@@ -74,7 +77,7 @@ exports.listeTitre = (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify({
             "titres" : pageTitre,
-            "filtre" : show_type,
+            "filtre" : filtreOriginal,
             "page" : page,
             "url_page_suivante": urlSuivante
             })
